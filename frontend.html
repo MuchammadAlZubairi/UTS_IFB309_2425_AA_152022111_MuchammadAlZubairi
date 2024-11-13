@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydroponic Monitoring System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            padding: 1.5rem;
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card {
+            padding: 1rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-header i {
+            color: #3b82f6;
+        }
+
+        .card-header span {
+            font-weight: 500;
+        }
+
+        .card-value {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .warnings {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 0.5rem;
+        }
+
+        .warnings-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #b91c1c;
+            font-weight: 500;
+        }
+
+        .warnings-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: #dc2626;
+        }
+
+        .chart-section {
+            margin-top: 1.5rem;
+        }
+
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .chart-container {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .chart-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hydroponic Monitoring System</h1>
+        
+        <!-- Status Cards -->
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <i class="lucide lucide-thermometer"></i>
+                    <span>Temperature</span>
+                </div>
+                <p class="card-value">24.5°C</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="lucide lucide-droplet"></i>
+                    <span>Humidity</span>
+                </div>
+                <p class="card-value">65%</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="lucide lucide-activity"></i>
+                    <span>pH Level</span>
+                </div>
+                <p class="card-value">6.5</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="lucide lucide-droplet"></i>
+                    <span>Turbidity</span>
+                </div>
+                <p class="card-value">12%</p>
+            </div>
+        </div>
+
+        <!-- Warnings -->
+        <div class="warnings">
+            <div class="warnings-header">
+                <i class="lucide lucide-alert-triangle"></i>
+                <h2>System Warnings</h2>
+            </div>
+            <ul class="warnings-list">
+                <li>pH levels are above normal range</li>
+                <li>Water temperature is too high</li>
+            </ul>
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-section">
+            <h2 class="chart-title">Sensor History</h2>
+            <div class="chart-container">
+                <div class="chart-placeholder">
+                    Chart visualization would go here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
